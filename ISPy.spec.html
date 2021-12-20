@@ -1,62 +1,32 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ISPy.spec package &mdash; ISPy 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> ISPy
-          
-
-          
           </a>
-
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -64,866 +34,104 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">ISPy.spec package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.atlas">ISPy.spec.atlas module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.bfield">ISPy.spec.bfield module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.calib">ISPy.spec.calib module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.crosstalk">ISPy.spec.crosstalk module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.wfa">ISPy.spec.wfa module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec">Module contents</a></li>
+<li><a class="reference internal" href="#ispy-spec-atlas-module">ISPy.spec.atlas module</a></li>
+<li><a class="reference internal" href="#ispy-spec-bfield-module">ISPy.spec.bfield module</a></li>
+<li><a class="reference internal" href="#ispy-spec-calib-module">ISPy.spec.calib module</a></li>
+<li><a class="reference internal" href="#ispy-spec-chromis-module">ISPy.spec.chromis module</a></li>
+<li><a class="reference internal" href="#ispy-spec-crisp-module">ISPy.spec.crisp module</a></li>
+<li><a class="reference internal" href="#ispy-spec-crosstalk-module">ISPy.spec.crosstalk module</a></li>
+<li><a class="reference internal" href="#ispy-spec-wfa-module">ISPy.spec.wfa module</a></li>
+<li><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </div>
-            
-          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">ISPy</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
       <li>ISPy.spec package</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-            
             <a href="_sources/ISPy.spec.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="ispy-spec-package">
-<h1>ISPy.spec package<a class="headerlink" href="#ispy-spec-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-ISPy.spec.atlas">
-<span id="ispy-spec-atlas-module"></span><h2>ISPy.spec.atlas module<a class="headerlink" href="#module-ISPy.spec.atlas" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="ISPy.spec.atlas.atlas">
-<em class="property">class </em><code class="sig-prename descclassname">ISPy.spec.atlas.</code><code class="sig-name descname">atlas</code><a class="headerlink" href="#ISPy.spec.atlas.atlas" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class to load (FTS) spectral atlas</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>None</strong></p>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>cont</strong> (<em>array_like</em>) – full atlas continuum intensities in units <cite>sunit</cite></p></li>
-<li><p><strong>spec</strong> (<em>array_like</em>) – full atlas spectrum in units <cite>sunit</cite></p></li>
-<li><p><strong>wave</strong> (<em>array_like</em>) – wavelengths in units <cite>wunit</cite></p></li>
-<li><p><strong>usys</strong> (<em>str</em>) – unit system, one of <cite>si_inu</cite>, <cite>si_ilambda</cite>, <cite>cgs_inu</cite> or <cite>cgs_ilambda</cite></p></li>
-<li><p><strong>sunit</strong> (<em>astropy CompositeUnit object</em>) – intensity units according to the <cite>usys</cite> setting</p></li>
-<li><p><strong>wunit</strong> (<em>astropy Unit object</em>) – wavelength unit</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.spec</span> <span class="k">import</span> <span class="n">atlas</span> <span class="k">as</span> <span class="n">S</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fts</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">atlas</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">wav</span><span class="p">,</span> <span class="n">sp</span><span class="p">,</span> <span class="n">cont</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mf">6562.</span><span class="p">,</span><span class="mf">6564.</span><span class="p">,</span> <span class="n">cgs</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">perHz</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Jaime de la Cruz Rodriguez (ISP/SU 2019)</p>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ISPy.spec.atlas.atlas.get" title="ISPy.spec.atlas.atlas.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(w0, w1[, cgs, nograv, perHz])</p></td>
-<td><p>Extract a subset of the atlas profile</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ISPy.spec.atlas.atlas.to" title="ISPy.spec.atlas.atlas.to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to</span></code></a>(usys_to[, perHz])</p></td>
-<td><p>Convert atlas intensity data to particular units</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="ISPy.spec.atlas.atlas.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">w0</em>, <em class="sig-param">w1</em>, <em class="sig-param">cgs=False</em>, <em class="sig-param">nograv=False</em>, <em class="sig-param">perHz=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.atlas.atlas.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extract a subset of the atlas profile</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>w0, w1</strong> (<em>float</em>) – lower and upper boundary of the wavelength range for which to
-extract the atlas profile</p></li>
-<li><p><strong>cgs</strong> (<em>bool, optional</em>) – return the intensities in cgs units (defaults False, i.e. use SI)</p></li>
-<li><p><strong>nograv</strong> (<em>bool, optional</em>) – account for gravitationl reddening (defaults False)</p></li>
-<li><p><strong>perHz</strong> (<em>bool, optional</em>) – return intensity in units per Hz (defaults True)</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<p>See class docstring</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors</dt>
-<dd class="field-odd"><p>Jaime de la Cruz Rodriguez (ISP/SU 2019), Gregal Vissers (ISP/SU
-2020)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="ISPy.spec.atlas.atlas.to">
-<code class="sig-name descname">to</code><span class="sig-paren">(</span><em class="sig-param">usys_to</em>, <em class="sig-param">perHz=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.atlas.atlas.to" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert atlas intensity data to particular units</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>usys_to</strong> (<em>str</em>) – descriptor setting the unit system to convert to, either <cite>si</cite> or
-<cite>cgs</cite> (case insensitive)</p></li>
-<li><p><strong>perHz</strong> (<em>bool, optional</em>) – convert to intensity units per Hz (defaults True)</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.spec</span> <span class="k">import</span> <span class="n">atlas</span> <span class="k">as</span> <span class="n">S</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fts</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">atlas</span><span class="p">()</span> <span class="c1"># intensity units are J/s/m^2/sr/Hz (SI, per Hz) by default</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">fts</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;cgs&#39;</span><span class="p">,</span> <span class="n">perHz</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># convert to erg/s/cm^2/sr/A</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Gregal Vissers (ISP/SU 2020)</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="module-ISPy.spec.bfield">
-<span id="ispy-spec-bfield-module"></span><h2>ISPy.spec.bfield module<a class="headerlink" href="#module-ISPy.spec.bfield" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="ISPy.spec.bfield.cartesian2cylindrical">
-<code class="sig-prename descclassname">ISPy.spec.bfield.</code><code class="sig-name descname">cartesian2cylindrical</code><span class="sig-paren">(</span><em class="sig-param">bvec_in</em>, <em class="sig-param">azim0=0</em>, <em class="sig-param">degrees=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.bfield.cartesian2cylindrical" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert the magnetic field vector in Cartesian decomposition B(x, y, z) to
-cylindrical decomposition B(lon, hor, azi)
-Wrapper function around cartesian2spherical() and spherical2cylindrical().</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bvec_in</strong> (<em>ndarray</em>) – magnetic feld vector of shape (3,), (3, nx) or (3, ny, nx)</p></li>
-<li><p><strong>azim0</strong> (<em>{0, 1, 2, 3}, optional</em>) – zero-azimith direction convention: +Y (azim0=0), +X (azim0=1), -Y
-(azim0=2), -X (azim0=3)</p></li>
-<li><p><strong>degrees</strong> (<em>bool, optional</em>) – return the azimuth in degrees (default False = radians)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>magnetic field vector of same shape as <cite>bvec_in</cite>, converted to the
-cylindrical decomposition</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bobs</span> <span class="o">=</span> <span class="n">bfield</span><span class="o">.</span><span class="n">cartesian2cylindrical</span><span class="p">(</span><span class="n">bvec</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.bfield.cartesian2spherical">
-<code class="sig-prename descclassname">ISPy.spec.bfield.</code><code class="sig-name descname">cartesian2spherical</code><span class="sig-paren">(</span><em class="sig-param">bvec_in</em>, <em class="sig-param">azim0=0</em>, <em class="sig-param">degrees=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.bfield.cartesian2spherical" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert the magnetic field vector in Cartesian decomposition B(x, y, z) to
-spherical decomposition B(tot, inc, azi)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bvec_in</strong> (<em>ndarray</em>) – magnetic feld vector of shape (3,), (3, nx) or (3, ny, nx)</p></li>
-<li><p><strong>azim0</strong> (<em>{0, 1, 2, 3}, optional</em>) – zero-azimith direction convention: +Y (azim0=0), +X (azim0=1), -Y
-(azim0=2), -X (azim0=3)</p></li>
-<li><p><strong>degrees</strong> (<em>bool, optional</em>) – return the inclination and azimuth in degrees (default False = radians)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>magnetic field vector of same shape as <cite>bvec_in</cite>, converted to spherical
-decomposition</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bsph</span> <span class="o">=</span> <span class="n">bfield</span><span class="o">.</span><span class="n">cartesian2spherical</span><span class="p">(</span><span class="n">bvec</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.bfield.cylindrical2cartesian">
-<code class="sig-prename descclassname">ISPy.spec.bfield.</code><code class="sig-name descname">cylindrical2cartesian</code><span class="sig-paren">(</span><em class="sig-param">bvec_in</em>, <em class="sig-param">azim0=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.bfield.cylindrical2cartesian" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert the magnetic field vector in cylindrical decomposition B(lon, hor,
-azi) to Cartesian decomposition B(x, y, z).
-Wrapper function around cylindrical2spherical() and spherical2cartesian().</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bvec_in</strong> (<em>ndarray</em>) – magnetic feld vector of shape (3,), (3, nx) or (3, ny, nx)</p></li>
-<li><p><strong>azim0</strong> (<em>{0, 1, 2, 3}, optional</em>) – zero-azimith direction convention: +Y (azim0=0), +X (azim0=1), -Y
-(azim0=2), -X (azim0=3)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>magnetic field vector of same shape as <cite>bvec_in</cite>, converted to Cartesian
-decomposition</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bxyz</span> <span class="o">=</span> <span class="n">bfield</span><span class="o">.</span><span class="n">cylindrical2cartesian</span><span class="p">(</span><span class="n">bvec</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.bfield.cylindrical2spherical">
-<code class="sig-prename descclassname">ISPy.spec.bfield.</code><code class="sig-name descname">cylindrical2spherical</code><span class="sig-paren">(</span><em class="sig-param">bvec_in</em>, <em class="sig-param">degrees=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.bfield.cylindrical2spherical" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert the magnetic field vector in cylindrical decomposition B(lon, hor,
-azi) to spherical decomposition B(tot, inc, azi)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bvec_in</strong> (<em>ndarray</em>) – magnetic field vector of shape (3,), (3, nx) or (3, ny, nx)</p></li>
-<li><p><strong>degrees</strong> (<em>bool, optional</em>) – return the inclination and azimuth in degrees (default False = radians)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>magnetic field vector of same shape as <cite>bvec_in</cite>, converted to spherical
-decomposition</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">bfield</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">bvec</span><span class="o">.</span><span class="n">shape</span>
-<span class="go">(3, 374, 175)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">bvec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">bvec</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="go">(0.000711255066562444, 179.99998474121094)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">bsph</span> <span class="o">=</span> <span class="n">bfield</span><span class="o">.</span><span class="n">cylindrical2spherical</span><span class="p">(</span><span class="n">bvec</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">bsph</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">bsph</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="go">(1.2413742733006074e-05, 3.1415923872736844)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.bfield.spherical2cartesian">
-<code class="sig-prename descclassname">ISPy.spec.bfield.</code><code class="sig-name descname">spherical2cartesian</code><span class="sig-paren">(</span><em class="sig-param">bvec_in</em>, <em class="sig-param">azim0=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.bfield.spherical2cartesian" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert the magnetic field vector in spherical decomposotion B(tot, inc,
-azi) to Cartesian decomposition B(x, y, z)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bvec_in</strong> (<em>ndarray</em>) – magnetic feld vector of shape (3,), (3, nx) or (3, ny, nx)</p></li>
-<li><p><strong>azim0</strong> (<em>{0, 1, 2, 3}, optional</em>) – zero-azimith direction convention: +Y (azim0=0), +X (azim0=1), -Y
-(azim0=2), -X (azim0=3)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>magnetic field vector of same shape as <cite>bvec_in</cite>, converted to Cartesian
-decomposition</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bxyz</span> <span class="o">=</span> <span class="n">bfield</span><span class="o">.</span><span class="n">spherical2cartesian</span><span class="p">(</span><span class="n">bvec</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.bfield.spherical2cylindrical">
-<code class="sig-prename descclassname">ISPy.spec.bfield.</code><code class="sig-name descname">spherical2cylindrical</code><span class="sig-paren">(</span><em class="sig-param">bvec_in</em>, <em class="sig-param">degrees=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.bfield.spherical2cylindrical" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert the magnetic field vector in spherical decomposition B(tot, inc,
-azi) to cylindrical decomposition B(lon, hor, azi)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>bvec_in</strong> (<em>ndarray</em>) – magnetic field vector of shape (3,), (3, nx) or (3, ny, nx)</p></li>
-<li><p><strong>degrees</strong> (<em>bool, optional</em>) – return the azimuth in degrees (default False = radians)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>magnetic field vector of same shape as <cite>bvec_in</cite>, converted to the
-cylindrical decomposition</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bobs</span> <span class="o">=</span> <span class="n">bfield</span><span class="o">.</span><span class="n">spherical2cylindrical</span><span class="p">(</span><span class="n">bvec</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-</div>
-<div class="section" id="module-ISPy.spec.calib">
-<span id="ispy-spec-calib-module"></span><h2>ISPy.spec.calib module<a class="headerlink" href="#module-ISPy.spec.calib" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="ISPy.spec.calib.convolve_atlas">
-<code class="sig-prename descclassname">ISPy.spec.calib.</code><code class="sig-name descname">convolve_atlas</code><span class="sig-paren">(</span><em class="sig-param">wave_atlas</em>, <em class="sig-param">spec_atlas</em>, <em class="sig-param">instrument_profile</em>, <em class="sig-param">mode='nearest'</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.calib.convolve_atlas" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convolve spectral atlas profile with instrument profile (after interpolation
-to the atlas wavelength grid)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>wave_atlas</strong> (<em>array_like</em>) – 1D array with wavelengths corresponding to <cite>spec_atlas</cite>.</p></li>
-<li><p><strong>spec_atlas</strong> (<em>array_like</em>) – 1D array with atlas intensity profile (e.g. from <cite>ISpy.spec.atlas</cite>)</p></li>
-<li><p><strong>instrument_profile</strong> (<em>ndarray</em>) – 2D array [wave, profile] with wavelength spacing (starting at 0) and
-instrumental profile to convolve the atlas profile with</p></li>
-<li><p><strong>mode</strong> (<em>str, optional</em>) – set interpolation in call to <cite>np.interp</cite> (defaults ‘nearest’)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>spec_convolved</strong> – 1D array with convolved profile</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>array_like</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">convolved</span> <span class="o">=</span> <span class="n">calib</span><span class="o">.</span><span class="n">convolve_atlas</span><span class="p">(</span><span class="n">wave_atlas</span><span class="p">,</span> <span class="n">spec_atlas</span><span class="p">,</span> <span class="n">ipr</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;cubic&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Gregal Vissers (ISP/SU 2020)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.calib.get_calibration">
-<code class="sig-prename descclassname">ISPy.spec.calib.</code><code class="sig-name descname">get_calibration</code><span class="sig-paren">(</span><em class="sig-param">wave_obs</em>, <em class="sig-param">spec_obs</em>, <em class="sig-param">wave_atlas</em>, <em class="sig-param">spec_atlas</em>, <em class="sig-param">mu=1.0</em>, <em class="sig-param">calib_at_dc=False</em>, <em class="sig-param">wave_idx=None</em>, <em class="sig-param">extra_weight=20.0</em>, <em class="sig-param">bounds=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.calib.get_calibration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get calibration offsets from fitting <cite>spec_obs</cite> to <cite>spec_atlas</cite>, assuming
-wavelength grids <cite>wave_obs</cite> and <cite>wave_atlas</cite></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>wave_obs</strong> (<em>array_like</em>) – 1D array with observed wavelengths. Must be of same size as <cite>spec_obs</cite>.</p></li>
-<li><p><strong>spec_obs</strong> (<em>array_like</em>) – 1D array with observed intensities.</p></li>
-<li><p><strong>wave_atlas</strong> (<em>array_like</em>) – 1D array with wavelengths corresponding to <cite>spec_atlas</cite>.</p></li>
-<li><p><strong>spec_atlas</strong> (<em>array_like</em>) – 1D array with atlas intensity profile (e.g. from <cite>ISpy.spec.atlas</cite>)</p></li>
-<li><p><strong>mu</strong> (<em>float, optional</em>) – cosine of heliocentric viewing angle of the observations (defaults 1.0
--&gt; disc centre)</p></li>
-<li><p><strong>calib_at_dc</strong> (<em>bool, optional</em>) – calibrate assuming <cite>spec_avg</cite> (or <cite>spec</cite>, if <cite>spec_avg</cite> is
-None) was taken at disc centre (defaults False).</p></li>
-<li><p><strong>wave_idx</strong> (<em>array_like, optional</em>) – wavelength indices that will get <cite>extra_weight</cite> during while fitting the
-intensity profile (default None -&gt; all wavelengths get equal weight)</p></li>
-<li><p><strong>extra_weight</strong> (<em>float, optional</em>) – amount of extra weight to give selected wavelength positions as
-specified by <cite>wave_idx</cite> (default 20)</p></li>
-<li><p><strong>bounds</strong> (<em>list of tuples, optional</em>) – list of tuples [(ifact_low, ifact_upp), (woff_low, woff_upp)] suggesting
-lower and upper bounds for fitting the intensity factor and wavelength
-offset (defaults to 1/50th and 50 times the fraction of <cite>spec_atlas</cite> to
-<cite>spec_obs</cite> for ifact, and ±0.3 for woff)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>calibration</strong> – multiplication factor and wavelength offset [ifact, woff] to be applied
-to <cite>spec_obs</cite> and <cite>wave_obs</cite> respectively.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>2-element array</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">calibration</span> <span class="o">=</span> <span class="n">get_calibration</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">spec</span><span class="p">,</span> <span class="n">wave_atlas</span><span class="p">,</span> <span class="n">spec_atlas</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">calib_at_dc</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Authors</dt>
-<dd class="field-odd"><p>Carlos Diaz (ISP/SU 2020), Gregal Vissers (ISP/SU 2020)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.calib.limbdarkening">
-<code class="sig-prename descclassname">ISPy.spec.calib.</code><code class="sig-name descname">limbdarkening</code><span class="sig-paren">(</span><em class="sig-param">wave</em>, <em class="sig-param">mu=1.0</em>, <em class="sig-param">nm=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.calib.limbdarkening" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return limb-darkening factor given wavelength and viewing angle
-mu=cos(theta)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>wave</strong> (<em>float or array_like</em>) – scalar or 1D array with wavelength(s).</p></li>
-<li><p><strong>mu</strong> (<em>float, optional</em>) – cosine of heliocentric viewing angle (default 1.0 -&gt; disc centre)</p></li>
-<li><p><strong>nm</strong> (<em>bool, optional</em>) – input wavelength units are nanometers (default False)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>factor</strong> – scaling factor(s) to be applied for given input wavelengths. Has as many
-elements as <cite>wave</cite>.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float or array_like</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">factor</span> <span class="o">=</span> <span class="n">limbdarkening</span><span class="p">(</span><span class="mf">630.25</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">nm</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Gregal Vissers (ISP/SU 2020)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.calib.spectrum">
-<code class="sig-prename descclassname">ISPy.spec.calib.</code><code class="sig-name descname">spectrum</code><span class="sig-paren">(</span><em class="sig-param">wave</em>, <em class="sig-param">spec</em>, <em class="sig-param">mu=1.0</em>, <em class="sig-param">spec_avg=None</em>, <em class="sig-param">calib_at_dc=False</em>, <em class="sig-param">atlas_range=0.5</em>, <em class="sig-param">wave_idx=None</em>, <em class="sig-param">extra_weight=20.0</em>, <em class="sig-param">bounds=None</em>, <em class="sig-param">instrument_profile=None</em>, <em class="sig-param">calib_wave=False</em>, <em class="sig-param">cgs=True</em>, <em class="sig-param">si=False</em>, <em class="sig-param">perHz=True</em>, <em class="sig-param">qsdc_calib=False</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.calib.spectrum" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calibrate spectrum intensity (in SI or cgs units) and wavelength by
-simultaneously fitting offsets given an atlas profile</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>wave</strong> (<em>array_like</em>) – 1D array with wavelengths.</p></li>
-<li><p><strong>spec</strong> (<em>ndarray</em>) – data (cube) with intensity profile(s) in counts to apply calibration to.
-May be higher dimension cube (e.g. [nt, ny, nx, nwave, nstokes]). If
-keyword argument <cite>spec_avg</cite> is None, then <cite>spec</cite> is assumed to be a 1D
-array of Stokes I intesities of same size as <cite>wave</cite> and will be used to
-determine the intensity calibration offset factor.</p></li>
-<li><p><strong>mu</strong> (<em>float, optional</em>) – cosine of heliocentric viewing angle of the observations (defaults 1.0
--&gt; disc centre)</p></li>
-<li><p><strong>spec_avg</strong> (<em>array_like, optional</em>) – averaged intensity profile to use for calibration
-(default None -&gt; use <cite>spec</cite> to calibrate on)</p></li>
-<li><p><strong>calib_at_dc</strong> (<em>bool, optional</em>) – calibrate assuming <cite>spec_avg</cite> (or <cite>spec</cite>, if <cite>spec_avg</cite> is None) was
-taken at disc centre (defaults False).</p></li>
-<li><p><strong>atlas_range</strong> (<em>float, optional</em>) – get atlas profile with for the range +/- this value (defaults 0.5)</p></li>
-<li><p><strong>wave_idx</strong> (<em>array_like, optional</em>) – wavelength indices that will get <cite>extra_weight</cite> during while fitting the
-intensity profile (default None -&gt; all wavelengths get equal weight)</p></li>
-<li><p><strong>extra_weight</strong> (<em>float, optional</em>) – amount of extra weight to give selected wavelength positions as
-specified by <cite>wave_idx</cite> (default 20)</p></li>
-<li><p><strong>bounds</strong> (<em>list of tuples, optional</em>) – [(ifact_low, ifact_upp), (woff_low, woff_upp)] suggesting lower and
-upper bounds for fitting the intensity factor and wavelength offset
-(defaults None)</p></li>
-<li><p><strong>instrument_profile</strong> (<em>ndarray, optional</em>) – 2D array [wave, profile] with wavelength spacing (starting at 0) and
-instrumental profile to convolve the atlas profile with</p></li>
-<li><p><strong>calib_wave</strong> (<em>bool, optional</em>) – perform wavelength calibration prior to intensity calibration (default
-False)</p></li>
-<li><p><strong>cgs</strong> (<em>bool, optional</em>) – output calibration in cgs units (default True)</p></li>
-<li><p><strong>si</strong> (<em>bool, optional</em>) – output calibration in SI units (default False)</p></li>
-<li><p><strong>perHz</strong> (<em>bool, optional</em>) – output calibration per frequency unit (default True)</p></li>
-<li><p><strong>qsdc_calib</strong> (<em>bool, optional</em>) – output calibration as fraction of quiet Sun disc centre continuum
-intensity (default False). If set, overrides <cite>cgs</cite>, <cite>si</cite> and <cite>perHz</cite></p></li>
-<li><p><strong>verbose</strong> (<em>bool, optional</em>) – output calibration plot and offset values to command line (defaults
-False)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>wave</strong> (<em>array_like</em>) – calibrated wavelength array</p></li>
-<li><p><strong>spec</strong> (<em>array_like</em>) – calibrated intensity profile array</p></li>
-<li><p><strong>factor</strong> (<em>float</em>) – offset factor converting data counts to absolute intensity</p></li>
-<li><p><strong>spec_fts</strong> (<em>array_like</em>) – atlas profile at wavelengths given by <cite>wave</cite>. Convolved with
-instrument profile if instrument_profile is not None.</p></li>
-<li><p><strong>unit</strong> (<em>object</em>) – intensity units</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wave_cal</span><span class="p">,</span> <span class="n">spec_cal</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">spec_fts</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="n">calib</span><span class="o">.</span><span class="n">spectrum</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">ispec</span><span class="p">,</span>
-<span class="go">        cgs=True, calib_wave=True, wave_idx=[0,1,-2,-1])</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Gregal Vissers, Carlos Diaz (ISP/SU 2019-2020)</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-ISPy.spec.crosstalk">
-<span id="ispy-spec-crosstalk-module"></span><h2>ISPy.spec.crosstalk module<a class="headerlink" href="#module-ISPy.spec.crosstalk" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="ISPy.spec.crosstalk.estimate_crosstalk">
-<code class="sig-prename descclassname">ISPy.spec.crosstalk.</code><code class="sig-name descname">estimate_crosstalk</code><span class="sig-paren">(</span><em class="sig-param">stokes_map</em>, <em class="sig-param">stokes_toclean</em>, <em class="sig-param">stokes_removefrom</em>, <em class="sig-param">nameoutput=None</em>, <em class="sig-param">interactive=True</em>, <em class="sig-param">npoints=5</em>, <em class="sig-param">verbose=True</em>, <em class="sig-param">sizeave=3</em>, <em class="sig-param">smoothvalue=100</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.crosstalk.estimate_crosstalk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given the input cube it outputs an estimation of the crosstalk between them
-for one time frame.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>stokes_map</strong> (<em>ndarray</em>) – Data cube for one time frame</p></li>
-<li><p><strong>stokes_toclean</strong> (<em>int</em>) – Stokes index to clean (usually 1 or 2)</p></li>
-<li><p><strong>stokes_removefrom</strong> (<em>int</em>) – Stokes index to clean (usually 3)</p></li>
-<li><p><strong>nameoutput</strong> (<em>None, optional (default: None)</em>) – Name of the output file with the field-dependent crosstalk and figures</p></li>
-<li><p><strong>interactive</strong> (<em>bool, optional (default: True)</em>) – Interactive method where the user selects points in the FOV.</p></li>
-<li><p><strong>npoints</strong> (<em>int, optional (default: 5)</em>) – Number of points to be selected</p></li>
-<li><p><strong>verbose</strong> (<em>bool, optional (default: True)</em>) – It prints the average crosstalk calculated with both methods</p></li>
-<li><p><strong>sizeave</strong> (<em>int, optional (default: 3)</em>) – Window size to average after clicking</p></li>
-<li><p><strong>smoothvalue</strong> (<em>int, optional (default: 100)</em>) – Smoothing width of the kernel after extrapolation</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Field-dependent crosstalk if interactive is True or a the mean value calculated by the automatic method if False</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">estimate_crosstalk</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,:],</span> <span class="n">stokes_toclean</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stokes_removefrom</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">nameoutput</span><span class="o">=</span><span class="s1">&#39;Q_test&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Authors</dt>
-<dd class="field-odd"><p>Carlos Diaz (ISP/SU 2019)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.crosstalk.get_projection">
-<code class="sig-prename descclassname">ISPy.spec.crosstalk.</code><code class="sig-name descname">get_projection</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">v</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.crosstalk.get_projection" title="Permalink to this definition">¶</a></dt>
-<dd><p>It outputs the scalar projection using the inner product of the vectors.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>u, v</strong> (<em>ndarray</em>) – input vectors</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Scalar projection</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
-<div class="section" id="module-ISPy.spec.wfa">
-<span id="ispy-spec-wfa-module"></span><h2>ISPy.spec.wfa module<a class="headerlink" href="#module-ISPy.spec.wfa" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="ISPy.spec.wfa.cder">
-<code class="sig-prename descclassname">ISPy.spec.wfa.</code><code class="sig-name descname">cder</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.wfa.cder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the finite difference derivative of Stokes I with respect to wavelength</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>array_like</em>) – 1D array with the wavelengths</p></li>
-<li><p><strong>y</strong> (<em>ndarray</em>) – 4D nummpy array (ny, nx, nstokes, nwave) with the observations</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>cder</strong> – 3D array with finite difference derivative of Stokes I</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cd</span> <span class="o">=</span> <span class="n">cder</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Jaime de la Cruz Rodríguez (ISP/SU 2018)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.wfa.getBhor">
-<code class="sig-prename descclassname">ISPy.spec.wfa.</code><code class="sig-name descname">getBhor</code><span class="sig-paren">(</span><em class="sig-param">w</em>, <em class="sig-param">d</em>, <em class="sig-param">lin</em>, <em class="sig-param">beta=0.0</em>, <em class="sig-param">vdop=0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.wfa.getBhor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the horizontal component of the magnetic field vector</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>w</strong> (<em>array_like</em>) – 1D numpy array with the wavelength offsets on the observation (can be relative to line-center)</p></li>
-<li><p><strong>d</strong> (<em>ndarray</em>) – 4D numpy array (ny, nx, nstokes, nwav) with the observations</p></li>
-<li><p><strong>line</strong> (<em>object</em>) – object from wfa.line class with the atomic data of the transition</p></li>
-<li><p><strong>beta</strong> (<em>float, optional</em>) – regularization factor that selects low-norm solutions. Use wisely.</p></li>
-<li><p><strong>vdop</strong> (<em>float, optional</em>) – typical Doppler width of the line. Wavelength points inside +/- vdop
-from line center will be excluded (default 0.05)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>Bhor</strong> – 2D array (ny,nx) with the transverse magnetic field</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lin</span> <span class="o">=</span> <span class="n">line</span><span class="p">(</span><span class="mi">6302</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">blos</span> <span class="o">=</span> <span class="n">getBhor</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">lin</span><span class="p">,</span> <span class="n">vdop</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Jaime de la Cruz Rodriguez (ISP/SU 2018)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.wfa.getBlos">
-<code class="sig-prename descclassname">ISPy.spec.wfa.</code><code class="sig-name descname">getBlos</code><span class="sig-paren">(</span><em class="sig-param">w</em>, <em class="sig-param">d</em>, <em class="sig-param">line</em>, <em class="sig-param">beta=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.wfa.getBlos" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the line-of-sight component of the magnetic field vector</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>w</strong> (<em>array_like</em>) – 1D numpy array with the wavelength offsets on the observation (can be relative to line-center)</p></li>
-<li><p><strong>d</strong> (<em>ndarray</em>) – 4D numpy array (ny, nx, nstokes, nwav) with the observations</p></li>
-<li><p><strong>line</strong> (<em>object</em>) – object from wfa.line class with the atomic data of the transition</p></li>
-<li><p><strong>beta</strong> (<em>float, optional</em>) – regularization factor that selects low-norm solutions (default 0.0). Use wisely.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>Blos</strong> – 2D array (ny, nx) with the line-of-sight magnetic field</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lin</span> <span class="o">=</span> <span class="n">line</span><span class="p">(</span><span class="mi">8542</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">blos</span> <span class="o">=</span> <span class="n">getBlos</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">lin</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Jaime de la Cruz Rodriguez (ISP/SU 2018)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.wfa.getBlosMask">
-<code class="sig-prename descclassname">ISPy.spec.wfa.</code><code class="sig-name descname">getBlosMask</code><span class="sig-paren">(</span><em class="sig-param">w</em>, <em class="sig-param">d</em>, <em class="sig-param">line</em>, <em class="sig-param">mask</em>, <em class="sig-param">beta=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.wfa.getBlosMask" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the line of sight component of the magnetic field vector, using
-selected wavelength points of the observation</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>w</strong> (<em>array_like</em>) – 1D numpy array with the wavelength offsets on the observation (can be relative to line-center)</p></li>
-<li><p><strong>d</strong> (<em>ndarray</em>) – 4D numpy array (ny, nx, nstokes, nwav) with the observations</p></li>
-<li><p><strong>line</strong> (<em>object</em>) – object from wfa.line class (also included) with the atomic data of the transition</p></li>
-<li><p><strong>mask</strong> (<em>tuple</em>) – a tuple/numpy array with the wavlength indices that should be used to compute Blong</p></li>
-<li><p><strong>beta</strong> (<em>float, optional</em>) – regularization factor that selects low-norm solutions (default 0.0). Use wisely.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>Blos</strong> – 2D array (ny,nx) with the line-of-sight magnetic field</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>ndarray</p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lin</span> <span class="o">=</span> <span class="n">line</span><span class="p">(</span><span class="mi">8542</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">blos</span> <span class="o">=</span> <span class="n">getBlosMask</span><span class="p">(</span><span class="n">wave</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">lin</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Jaime de la Cruz Rodriguez (ISP/SU 2018)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="ISPy.spec.wfa.getBlosProf">
-<code class="sig-prename descclassname">ISPy.spec.wfa.</code><code class="sig-name descname">getBlosProf</code><span class="sig-paren">(</span><em class="sig-param">w</em>, <em class="sig-param">d</em>, <em class="sig-param">line</em>, <em class="sig-param">beta=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.wfa.getBlosProf" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="class">
-<dt id="ISPy.spec.wfa.line">
-<em class="property">class </em><code class="sig-prename descclassname">ISPy.spec.wfa.</code><code class="sig-name descname">line</code><span class="sig-paren">(</span><em class="sig-param">cw=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.wfa.line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>cw</strong> (<em>integer, optional</em>) – wavelength identifier for pre-defined initialisation</p>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>cw</strong> (<em>float</em>) – central wavelength</p></li>
-<li><p><strong>j1</strong> (<em>float</em>) – total angular momentum quantum number of the lower level</p></li>
-<li><p><strong>j2</strong> (<em>float</em>) – total angular momentum quantum number of the upper level</p></li>
-<li><p><strong>g1</strong> (<em>float</em>) – Landé g-factor of the lower level</p></li>
-<li><p><strong>g2</strong> (<em>float</em>) – Landé g-factor of the upper level</p></li>
-<li><p><strong>geff</strong> (<em>float</em>) – effective Landé g-factor</p></li>
-<li><p><strong>Gg</strong> (<em>float</em>) – \bar{G} in Eqs. (9.74cd), (9.76) and (9.77) in Degl’Innocenti &amp; Landolfi
-(2004); a measure of the sensitivity of a given spectral line to the
-Zeeman effect in Q and U.</p></li>
-<li><p><strong>larm</strong> (<em>float</em><em>, </em><em>constant</em>) – Larmor frequency</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lin</span> <span class="o">=</span> <span class="n">line</span><span class="p">(</span><span class="mi">6302</span><span class="p">)</span>
-<span class="go">line::init: cw=6302.4931, geff=2.49, Gg=6.200100000000001</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Jaime de la Cruz Rodríguez (ISP/SU 2018)</p>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ISPy.spec.wfa.line.update" title="ISPy.spec.wfa.line.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(j1, j2, g1, g2, cw)</p></td>
-<td><p>Update the atomic data for lines that are not defined in the constructor</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="ISPy.spec.wfa.line.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">j1</em>, <em class="sig-param">j2</em>, <em class="sig-param">g1</em>, <em class="sig-param">g2</em>, <em class="sig-param">cw</em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.wfa.line.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the atomic data for lines that are not defined in the constructor</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>j1</strong> (<em>float</em>) – total angular momentum quantum number of the lower level</p></li>
-<li><p><strong>j2</strong> (<em>float</em>) – total angular momentum quantum number of the upper level</p></li>
-<li><p><strong>g1</strong> (<em>float</em>) – Landé g-factor of the lower level</p></li>
-<li><p><strong>g2</strong> (<em>float</em>) – Landé g-factor of the upper level</p></li>
-<li><p><strong>cw</strong> (<em>float</em>) – central wavelength of the line</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lin</span> <span class="o">=</span> <span class="n">line</span><span class="p">(</span><span class="n">cw</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">lin</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">6173.3340</span><span class="p">)</span>
-<span class="go">line::init: cw=6173.334, geff=2.5, Gg=6.25</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Author</dt>
-<dd class="field-odd"><p>Jaime de la Cruz Rodríguez (ISP/SU 2018)</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="module-ISPy.spec">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ISPy.spec" title="Permalink to this headline">¶</a></h2>
-<p>Tools and scripts for spectral calibration, cleaning and fitting.</p>
-</div>
-</div>
+             
+  <section id="ispy-spec-package">
+<h1>ISPy.spec package<a class="headerlink" href="#ispy-spec-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ispy-spec-atlas-module">
+<h2>ISPy.spec.atlas module<a class="headerlink" href="#ispy-spec-atlas-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ispy-spec-bfield-module">
+<h2>ISPy.spec.bfield module<a class="headerlink" href="#ispy-spec-bfield-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ispy-spec-calib-module">
+<h2>ISPy.spec.calib module<a class="headerlink" href="#ispy-spec-calib-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ispy-spec-chromis-module">
+<h2>ISPy.spec.chromis module<a class="headerlink" href="#ispy-spec-chromis-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ispy-spec-crisp-module">
+<h2>ISPy.spec.crisp module<a class="headerlink" href="#ispy-spec-crisp-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ispy-spec-crosstalk-module">
+<h2>ISPy.spec.crosstalk module<a class="headerlink" href="#ispy-spec-crosstalk-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="ispy-spec-wfa-module">
+<h2>ISPy.spec.wfa module<a class="headerlink" href="#ispy-spec-wfa-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline"></a></h2>
+</section>
+</section>
 
 
            </div>
-           
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &copy; Copyright 2020, ISP
-
-    </p>
+    <p>&#169; Copyright 2020, ISP.</p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
