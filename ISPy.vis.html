@@ -39,7 +39,7 @@
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">ISPy.vis package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#ispy-vis-readout-fn-module">ISPy.vis.readout_fn module</a></li>
+<li><a class="reference internal" href="#module-ISPy.vis.readout_fn">ISPy.vis.readout_fn module</a></li>
 <li><a class="reference internal" href="#module-ISPy.vis.show_hazel">ISPy.vis.show_hazel module</a></li>
 <li><a class="reference internal" href="#module-ISPy.vis">Module contents</a></li>
 </ul>
@@ -75,8 +75,113 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
 </section>
-<section id="ispy-vis-readout-fn-module">
-<h2>ISPy.vis.readout_fn module<a class="headerlink" href="#ispy-vis-readout-fn-module" title="Permalink to this headline"></a></h2>
+<section id="module-ISPy.vis.readout_fn">
+<span id="ispy-vis-readout-fn-module"></span><h2>ISPy.vis.readout_fn module<a class="headerlink" href="#module-ISPy.vis.readout_fn" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.vis.readout_fn.readout_1c">
+<span class="sig-prename descclassname"><span class="pre">ISPy.vis.readout_fn.</span></span><span class="sig-name descname"><span class="pre">readout_1c</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obsf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ny</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.vis.readout_fn.readout_1c" title="Permalink to this definition"></a></dt>
+<dd><p>Read 1-component of photospheric and chromospheric data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obsf</strong> (<em>str</em>) – filename of observed Stokes maps</p></li>
+<li><p><strong>nx</strong> (<em>int</em>) – xsize</p></li>
+<li><p><strong>ny</strong> (<em>int</em>) – ysize</p></li>
+<li><p><strong>invf</strong> (<em>str</em>) – filename of inverted maps</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>inv_ch</strong> (<em>ndarray</em>) – inverted parameters in 3D array [nx, ny, parameters]</p></li>
+<li><p><strong>inv_ph</strong> (<em>ndarray</em>) – photospheric inverted parameters in 4D array [nx, ny, logtau, parameters]</p></li>
+<li><p><strong>synpro</strong> (<em>ndarray</em>) – synthetic profiles in 4D array [nx, ny, 4stks, wav]</p></li>
+<li><p><strong>logtau</strong> (<em>array_like</em>) – logtau array</p></li>
+<li><p><strong>phff</strong> (<em>float</em>) – photospheric filling factor</p></li>
+<li><p><strong>chi2</strong> (<em>ndarray</em>) – chisquare map [nx, ny]</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inv_ch</span><span class="p">,</span> <span class="n">inv_ph</span><span class="p">,</span> <span class="n">synpro</span><span class="p">,</span> <span class="n">logtau</span><span class="p">,</span> <span class="n">phff</span><span class="p">,</span><span class="n">chi2</span> <span class="o">=</span> <span class="n">readout_1c_ch</span><span class="p">(</span><span class="n">obsf</span><span class="p">,</span><span class="n">nx</span><span class="p">,</span><span class="n">ny</span><span class="p">,</span> <span class="n">invf</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Rahul Yadav (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.vis.readout_fn.readout_1c_ch">
+<span class="sig-prename descclassname"><span class="pre">ISPy.vis.readout_fn.</span></span><span class="sig-name descname"><span class="pre">readout_1c_ch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obsf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ny</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.vis.readout_fn.readout_1c_ch" title="Permalink to this definition"></a></dt>
+<dd><p>Read chromospheric part of 1-component inferred atmosphere</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obsf</strong> (<em>str</em>) – filename of observed Stokes maps</p></li>
+<li><p><strong>nx</strong> (<em>int</em>) – xsize</p></li>
+<li><p><strong>ny</strong> (<em>int</em>) – ysize</p></li>
+<li><p><strong>invf</strong> (<em>str</em>) – filename of inverted maps</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>inv_ch</strong> (<em>ndarray</em>) – inverted parameters in 3D array [nx, ny, parameters]</p></li>
+<li><p><strong>synpro</strong> (<em>ndarray</em>) – synthetic profiles in 4D array [nx, ny, 4stks, wav]</p></li>
+<li><p><strong>chi2</strong> (<em>ndarray</em>) – chisquare map [nx, ny]</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inv_ch</span><span class="p">,</span> <span class="n">synpro</span><span class="p">,</span><span class="n">chi2</span> <span class="o">=</span> <span class="n">readout_1c_ch</span><span class="p">(</span><span class="n">obsf</span><span class="p">,</span><span class="n">nx</span><span class="p">,</span><span class="n">ny</span><span class="p">,</span> <span class="n">invf</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Rahul Yadav (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.vis.readout_fn.readout_2c">
+<span class="sig-prename descclassname"><span class="pre">ISPy.vis.readout_fn.</span></span><span class="sig-name descname"><span class="pre">readout_2c</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obsf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ny</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.vis.readout_fn.readout_2c" title="Permalink to this definition"></a></dt>
+<dd><p>Read 2-component of chromospheric and 1-component of photospheric data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obsf</strong> (<em>str</em>) – filename of observed Stokes maps</p></li>
+<li><p><strong>nx</strong> (<em>int</em>) – xsize</p></li>
+<li><p><strong>ny</strong> (<em>int</em>) – ysize</p></li>
+<li><p><strong>invf</strong> (<em>str</em>) – filename of inverted maps</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>inv_ch</strong> (<em>ndarray</em>) – inverted parameters in 4D array [nx, ny, parameters, 2]</p></li>
+<li><p><strong>inv_ph</strong> (<em>ndarray</em>) – photospheric inverted parameters in 4D array [nx, ny, logtau, parameters]</p></li>
+<li><p><strong>synpro</strong> (<em>ndarray</em>) – synthetic profiles in 4D array [nx, ny, 4stks, wav]</p></li>
+<li><p><strong>logtau</strong> (<em>array_like</em>) – logtau array</p></li>
+<li><p><strong>phff</strong> (<em>float</em>) – photospheric filling factor</p></li>
+<li><p><strong>chi2</strong> (<em>ndarray</em>) – chisquare map [nx, ny]</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inv_ch</span><span class="p">,</span> <span class="n">inv_ph</span><span class="p">,</span><span class="n">synpro</span><span class="p">,</span> <span class="n">logtau</span><span class="p">,</span> <span class="n">phff</span><span class="p">,</span><span class="n">chi2</span> <span class="o">=</span> <span class="n">readout_1c_ch</span><span class="p">(</span><span class="n">obsf</span><span class="p">,</span><span class="n">nx</span><span class="p">,</span><span class="n">ny</span><span class="p">,</span> <span class="n">invf</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Rahul Yadav (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="module-ISPy.vis.show_hazel">
 <span id="ispy-vis-show-hazel-module"></span><h2>ISPy.vis.show_hazel module<a class="headerlink" href="#module-ISPy.vis.show_hazel" title="Permalink to this headline"></a></h2>
