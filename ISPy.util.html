@@ -40,15 +40,15 @@
 <li><a class="reference internal" href="#">ISPy.util package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-ISPy.util.azimuth">ISPy.util.azimuth module</a></li>
-<li><a class="reference internal" href="#ispy-util-cubeshow-module">ISPy.util.cubeshow module</a></li>
+<li><a class="reference internal" href="#module-ISPy.util.cubeshow">ISPy.util.cubeshow module</a></li>
 <li><a class="reference internal" href="#module-ISPy.util.find">ISPy.util.find module</a></li>
 <li><a class="reference internal" href="#module-ISPy.util.gentools">ISPy.util.gentools module</a></li>
 <li><a class="reference internal" href="#ispy-util-lineplot-module">ISPy.util.lineplot module</a></li>
 <li><a class="reference internal" href="#ispy-util-neural-estimation-module">ISPy.util.neural_estimation module</a></li>
-<li><a class="reference internal" href="#ispy-util-obs-module">ISPy.util.obs module</a></li>
-<li><a class="reference internal" href="#ispy-util-plottools-module">ISPy.util.plottools module</a></li>
+<li><a class="reference internal" href="#module-ISPy.util.obs">ISPy.util.obs module</a></li>
+<li><a class="reference internal" href="#module-ISPy.util.plottools">ISPy.util.plottools module</a></li>
 <li><a class="reference internal" href="#module-ISPy.util.rebin">ISPy.util.rebin module</a></li>
-<li><a class="reference internal" href="#ispy-util-remap-module">ISPy.util.remap module</a></li>
+<li><a class="reference internal" href="#module-ISPy.util.remap">ISPy.util.remap module</a></li>
 <li><a class="reference internal" href="#module-ISPy.util">Module contents</a></li>
 </ul>
 </li>
@@ -124,8 +124,68 @@ for a 2D cube array.</p>
 </dd></dl>
 
 </section>
-<section id="ispy-util-cubeshow-module">
-<h2>ISPy.util.cubeshow module<a class="headerlink" href="#ispy-util-cubeshow-module" title="Permalink to this headline"></a></h2>
+<section id="module-ISPy.util.cubeshow">
+<span id="ispy-util-cubeshow-module"></span><h2>ISPy.util.cubeshow module<a class="headerlink" href="#module-ISPy.util.cubeshow" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.cubeshow.animate_cube">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.cubeshow.</span></span><span class="sig-name descname"><span class="pre">animate_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cube_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gray'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.cubeshow.animate_cube" title="Permalink to this definition"></a></dt>
+<dd><p>Animates a python cube for quick visualisation and saves mp4.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cube_array</strong> (<em>3D array[t,x,y]</em>) – The array to be animated.</p></li>
+<li><p><strong>name</strong> (<em>bool, optional</em>) – name of file to save, must end with .mp4. Will not save if not used. Default = None</p></li>
+<li><p><strong>show</strong> (<em>bool, optional</em>) – Wheather or not to display animation. Default = True.</p></li>
+<li><p><strong>cut</strong> (<em>int, optional</em>) – trims pixels off of the images edge to remove edge detector effects. Default = True as 0 returns empty array.</p></li>
+<li><p><strong>mn</strong> (<em>float, optional</em>) – mean value to used for contrast. Default=0</p></li>
+<li><p><strong>sd</strong> (<em>float, optional</em>) – Std value to used for contrast. Default=0</p></li>
+<li><p><strong>interval</strong> (<em>int, optional</em>) – #of ms between each frame. Default=75</p></li>
+<li><p><strong>cmap</strong> (<em>str, optional</em>) – colormap used for animation. Default=’gray’</p></li>
+<li><p><strong>fps</strong> (<em>float, optional</em>) – frames per second. Default = 20</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Video file if name is given.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>from ISPy.util import cubeshow as cs</p>
+<p>a = np.random.random([90,100,100])
+cs.animate_cube(a, ‘video.mp4’,cut=20,interval=100)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors</dt>
+<dd class="field-odd"><p>Alex Pietrow (ISP-SU 2021)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.cubeshow.plotall">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.cubeshow.</span></span><span class="sig-name descname"><span class="pre">plotall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cube_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fignum</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">array([4,</span> <span class="pre">6])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Title'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.cubeshow.plotall" title="Permalink to this definition"></a></dt>
+<dd><p>Plot a 3D cube into a subplot array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cube_array</strong> (<em>3D array[t,x,y]</em>) – The array to be animated.</p></li>
+<li><p><strong>fignum</strong> (<em>2D array</em>) – Number of subplots. Default = np.array([4,6])</p></li>
+<li><p><strong>title</strong> (<em>str, optional</em>) – Title of plot, defealt=’Title’</p></li>
+<li><p><strong>save</strong> (<em>bool, optional</em>) – Saves output to file named after title. Default = False</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>a = np.random.random([9,100,100])
+plotall(a, fignum=np.array([3,3]), title=’test’,save=1)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors</dt>
+<dd class="field-odd"><p>Alex Pietrow (ISP-SU 2021)</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="module-ISPy.util.find">
 <span id="ispy-util-find-module"></span><h2>ISPy.util.find module<a class="headerlink" href="#module-ISPy.util.find" title="Permalink to this headline"></a></h2>
@@ -241,11 +301,107 @@ element in array1</p>
 <section id="ispy-util-neural-estimation-module">
 <h2>ISPy.util.neural_estimation module<a class="headerlink" href="#ispy-util-neural-estimation-module" title="Permalink to this headline"></a></h2>
 </section>
-<section id="ispy-util-obs-module">
-<h2>ISPy.util.obs module<a class="headerlink" href="#ispy-util-obs-module" title="Permalink to this headline"></a></h2>
+<section id="module-ISPy.util.obs">
+<span id="ispy-util-obs-module"></span><h2>ISPy.util.obs module<a class="headerlink" href="#module-ISPy.util.obs" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.obs.viewangle">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.obs.</span></span><span class="sig-name descname"><span class="pre">viewangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heliographic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.obs.viewangle" title="Permalink to this definition"></a></dt>
+<dd><p>Return the viewing angle theta (and mu = cos(theta)) given a set of solar
+coordinates in the helioprojective or heliographic Stonyhurst system</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xy</strong> (<em>array_like</em>) – 2-element list or array with the coordinate values (in arcsec if
+helioprojective, in degrees if heliographic)</p></li>
+<li><p><strong>date</strong> (<em>str, optional</em>) – date for which to get the viewing angle (default: today’s date)</p></li>
+<li><p><strong>heliographic</strong> (<em>bool, optional</em>) – switch to indicate input coordinates are heliographic Stonyhurst
+(default False, i.e. coordinates are helioprojective)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>viewangle</strong> – 2-element list with [theta, mu]. Theta is given in degrees.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.util</span> <span class="k">import</span> <span class="n">obs</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">obs</span><span class="o">.</span><span class="n">viewangle</span><span class="p">([</span><span class="mi">240</span><span class="p">,</span><span class="o">-</span><span class="mi">380</span><span class="p">],</span> <span class="n">date</span><span class="o">=</span><span class="s1">&#39;2017-08-02&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">obs</span><span class="o">.</span><span class="n">viewangle</span><span class="p">([</span><span class="mi">30</span><span class="p">,</span><span class="o">-</span><span class="mi">50</span><span class="p">],</span> <span class="n">date</span><span class="o">=</span><span class="s1">&#39;2019-01-12&#39;</span><span class="p">,</span> <span class="n">heliographic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># S50 W30</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Gregal Vissers (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="ispy-util-plottools-module">
-<h2>ISPy.util.plottools module<a class="headerlink" href="#ispy-util-plottools-module" title="Permalink to this headline"></a></h2>
+<section id="module-ISPy.util.plottools">
+<span id="ispy-util-plottools-module"></span><h2>ISPy.util.plottools module<a class="headerlink" href="#module-ISPy.util.plottools" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ISPy.util.plottools.MidpointNormalize">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ISPy.util.plottools.</span></span><span class="sig-name descname"><span class="pre">MidpointNormalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midpoint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.plottools.MidpointNormalize" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">matplotlib.colors.Normalize</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>clip</strong></dt><dd></dd>
+<dt><strong>vmax</strong></dt><dd></dd>
+<dt><strong>vmin</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code>(value[, clip])</p></td>
+<td><p>Normalize <em>value</em> data in the <code class="docutils literal notranslate"><span class="pre">[vmin,</span> <span class="pre">vmax]</span></code> interval into the <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">1.0]</span></code> interval and return it.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">autoscale</span></code>(A)</p></td>
+<td><p>Set <em>vmin</em>, <em>vmax</em> to min, max of <em>A</em>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">autoscale_None</span></code>(A)</p></td>
+<td><p>If vmin or vmax are not set, use the min/max of <em>A</em> to set them.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">process_value</span></code>(value)</p></td>
+<td><p>Homogenize the input <em>value</em> for easy and efficient normalization.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">scaled</span></code>()</p></td>
+<td><p>Return whether vmin and vmax are set.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>inverse</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.plottools.add_colorbar">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.plottools.</span></span><span class="sig-name descname"><span class="pre">add_colorbar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aspect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad_fraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.plottools.add_colorbar" title="Permalink to this definition"></a></dt>
+<dd><p>Add a vertical color bar to an image plot</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.plottools.make_colormap">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.plottools.</span></span><span class="sig-name descname"><span class="pre">make_colormap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.plottools.make_colormap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 <section id="module-ISPy.util.rebin">
 <span id="ispy-util-rebin-module"></span><h2>ISPy.util.rebin module<a class="headerlink" href="#module-ISPy.util.rebin" title="Permalink to this headline"></a></h2>
@@ -309,8 +465,112 @@ element in array1</p>
 </dd></dl>
 
 </section>
-<section id="ispy-util-remap-module">
-<h2>ISPy.util.remap module<a class="headerlink" href="#ispy-util-remap-module" title="Permalink to this headline"></a></h2>
+<section id="module-ISPy.util.remap">
+<span id="ispy-util-remap-module"></span><h2>ISPy.util.remap module<a class="headerlink" href="#module-ISPy.util.remap" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.remap.bvec2cea">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.remap.</span></span><span class="sig-name descname"><span class="pre">bvec2cea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.remap.bvec2cea" title="Permalink to this definition"></a></dt>
+<dd><p>Transformation to Cylindrical equal area projection (CEA) from CCD
+detector as it is donde with SHARPs according to Xudong Sun (2018).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>field_x, field_y, field_z</strong> (<em>array</em>) – 2D array with the magnetic field in cartesian coordinates</p></li>
+<li><p><strong>dict_header</strong> (<em>dictionary</em>) – Header with information of the observation. It works with a SDO header
+or it can be created from other data. It should include:
+dict_header = {‘CRLT_OBS’:float, ‘RSUN_OBS’:float, ‘crota2’:float, ‘CDELT1’:float,
+‘crpix1’:float, ‘crpix2’:float, ‘LATDTMAX’:float, ‘LATDTMAX’:float ‘LATDTMAX’:float,
+‘LONDTMAX’:float, ‘LATDTMIN’:float, ‘LONDTMIN’:float, ‘naxis1’:float, ‘naxis2’:float}
+They should follow the same definition as given for SDO data:
+<a class="reference external" href="https://www.lmsal.com/sdodocs/doc?cmd=dcur&amp;proj_num=SDOD0019&amp;file_type=pdf">https://www.lmsal.com/sdodocs/doc?cmd=dcur&amp;proj_num=SDOD0019&amp;file_type=pdf</a></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Three components of the magnetic field in heliocentric spherical coordinates and
+in cylindrical equal are projection.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>arrays</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">field_z</span> <span class="o">=</span> <span class="n">field</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">inclination</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">field_hor</span> <span class="o">=</span> <span class="n">field</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">inclination</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">field_y</span> <span class="o">=</span> <span class="n">field_hor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">azimuth</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">field_x</span> <span class="o">=</span> <span class="o">-</span><span class="n">field_hor</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">azimuth</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">180.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">field_x_h2</span><span class="p">,</span> <span class="n">field_y_h2</span><span class="p">,</span> <span class="n">field_z_h2</span> <span class="o">=</span> <span class="n">bvec2cea</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">header</span><span class="p">,</span> <span class="n">field_x</span><span class="p">,</span> <span class="n">field_y</span><span class="p">,</span> <span class="n">field_z</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Authors</dt>
+<dd class="field-odd"><p>Carlos Diaz (ISP/SU 2020), Gregal Vissers (ISP/SU 2020)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.remap.remap2cea">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.remap.</span></span><span class="sig-name descname"><span class="pre">remap2cea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict_header</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.03</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.remap.remap2cea" title="Permalink to this definition"></a></dt>
+<dd><p>Map projection of the original input into the cylindical equal area system (CEA).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dict_header</strong> (<em>dictionary</em>) – Header with information of the observation. It works with a SDO header
+or it can be created from other data. It should include:
+dict_header = {‘CRLT_OBS’:float, ‘RSUN_OBS’:float, ‘crota2’:float, ‘CDELT1’:float,
+‘crpix1’:float, ‘crpix2’:float, ‘LATDTMAX’:float, ‘LATDTMAX’:float ‘LATDTMAX’:float,
+‘LONDTMAX’:float, ‘LATDTMIN’:float, ‘LONDTMIN’:float, ‘naxis1’:float, ‘naxis2’:float}
+They should follow the same definition as given for SDO data:
+<a class="reference external" href="https://www.lmsal.com/sdodocs/doc?cmd=dcur&amp;proj_num=SDOD0019&amp;file_type=pdf">https://www.lmsal.com/sdodocs/doc?cmd=dcur&amp;proj_num=SDOD0019&amp;file_type=pdf</a></p></li>
+<li><p><strong>field_x, field_y, field_z</strong> (<em>array</em>) – 2D array with the magnetic field in cartesian coordinates</p></li>
+<li><p><strong>deltal</strong> (<em>float</em>) – Heliographic degrees in the rotated coordinate system. SHARP CEA pixels are 0.03</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>array</em> – Remaping of the magnetic field to the cylindical equal area system (CEA).</p></li>
+<li><p><em>Authors:</em> – Carlos Diaz (ISP/SU 2020), Gregal Vissers (ISP/SU 2020)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.remap.sphere2img">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.remap.</span></span><span class="sig-name descname"><span class="pre">sphere2img</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lonc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xcenter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ycenter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rsun</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peff</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.remap.sphere2img" title="Permalink to this definition"></a></dt>
+<dd><p>Conversion between Heliographic coordinates to CCD coordinates.
+Ported from sphere2img written in IDL : Adapted from Cartography.c by Rick Bogart,
+by Xudong Sun [Eq 5&amp;6 in <a class="reference external" href="https://arxiv.org/pdf/1309.2392.pdf">https://arxiv.org/pdf/1309.2392.pdf</a>]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lat, lon</strong> (<em>array, array</em>) – input heliographic coordinates (latitude and longitude)</p></li>
+<li><p><strong>latc, lonc</strong> (<em>float, float</em>) – Heliographic longitud and latitude of the refenrence (center) pixel</p></li>
+<li><p><strong>xcenter, ycenter</strong> (<em>float, float</em>) – Center coordinates in the image</p></li>
+<li><p><strong>rsun</strong> (<em>float</em>) – Solar radius in pixels</p></li>
+<li><p><strong>peff</strong> (<em>float</em>) – p-angle: the position angle between the geocentric north pole and the solar
+rotational north pole measured eastward from geocentric north.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Latitude and longitude in the new CCD coordinate system.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.util.remap.vector_transformation">
+<span class="sig-prename descclassname"><span class="pre">ISPy.util.remap.</span></span><span class="sig-name descname"><span class="pre">vector_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">peff</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latitude_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_x_cea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_y_cea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_z_cea</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_in_rad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.util.remap.vector_transformation" title="Permalink to this definition"></a></dt>
+<dd><p>Magnetic field transformation matrix (see Allen Gary &amp; Hagyard 1990)
+[Eq 7 in <a class="reference external" href="https://arxiv.org/pdf/1309.2392.pdf">https://arxiv.org/pdf/1309.2392.pdf</a>]</p>
+</dd></dl>
+
 </section>
 <section id="module-ISPy.util">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ISPy.util" title="Permalink to this headline"></a></h2>

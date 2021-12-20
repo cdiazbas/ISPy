@@ -41,8 +41,8 @@
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-ISPy.io.lapalma">ISPy.io.lapalma module</a></li>
 <li><a class="reference internal" href="#module-ISPy.io.pyio">ISPy.io.pyio module</a></li>
-<li><a class="reference internal" href="#ispy-io-sn-module">ISPy.io.sn module</a></li>
-<li><a class="reference internal" href="#ispy-io-solarnet-module">ISPy.io.solarnet module</a></li>
+<li><a class="reference internal" href="#module-ISPy.io.sn">ISPy.io.sn module</a></li>
+<li><a class="reference internal" href="#module-ISPy.io.solarnet">ISPy.io.solarnet module</a></li>
 <li><a class="reference internal" href="#module-ISPy.io">Module contents</a></li>
 </ul>
 </li>
@@ -398,11 +398,231 @@ and then comes the raw data.</p>
 <dd></dd></dl>
 
 </section>
-<section id="ispy-io-sn-module">
-<h2>ISPy.io.sn module<a class="headerlink" href="#ispy-io-sn-module" title="Permalink to this headline"></a></h2>
+<section id="module-ISPy.io.sn">
+<span id="ispy-io-sn-module"></span><h2>ISPy.io.sn module<a class="headerlink" href="#module-ISPy.io.sn" title="Permalink to this headline"></a></h2>
+<p>Python tools to read SST data formatted as FITS files conforming
+to the SOLARNET standard.</p>
+<p>Written by Jorrit Leenaarts (ISP/SU 2021)</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ISPy.io.sn.sstdata">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ISPy.io.sn.</span></span><span class="sig-name descname"><span class="pre">sstdata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.io.sn.sstdata" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>class for reading and handling SST data formatted as FITS files conforming
+to the SOLARNET standard.</p>
+</dd></dl>
+
 </section>
-<section id="ispy-io-solarnet-module">
-<h2>ISPy.io.solarnet module<a class="headerlink" href="#ispy-io-solarnet-module" title="Permalink to this headline"></a></h2>
+<section id="module-ISPy.io.solarnet">
+<span id="ispy-io-solarnet-module"></span><h2>ISPy.io.solarnet module<a class="headerlink" href="#module-ISPy.io.solarnet" title="Permalink to this headline"></a></h2>
+<p>Python tools to read and write ‘SOLARNET’ cubes</p>
+<p>Written by Carlos Diaz (ISP/SU 2019)</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.io.solarnet.get_coord">
+<span class="sig-prename descclassname"><span class="pre">ISPy.io.solarnet.</span></span><span class="sig-name descname"><span class="pre">get_coord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pix_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pix_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeFrame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.io.solarnet.get_coord" title="Permalink to this definition"></a></dt>
+<dd><p>Converts pixel values to solar coordinates</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – name of the data cube</p></li>
+<li><p><strong>pix_x, pix_y</strong> (<em>int</em>) – pixel location to convert</p></li>
+<li><p><strong>timeFrame</strong> (<em>int</em>) – selected frame to the coordinates for (Default value = 0)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>xy_output</strong> – solar coordinates in arcsec</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.io</span> <span class="k">import</span> <span class="n">solarnet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">x_output</span><span class="p">,</span> <span class="n">y_output</span><span class="p">]</span> <span class="o">=</span> <span class="n">solarnet</span><span class="o">.</span><span class="n">get_coord</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">pix_x</span><span class="p">,</span><span class="n">pix_y</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Carlos Diaz Baso (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.io.solarnet.get_extent">
+<span class="sig-prename descclassname"><span class="pre">ISPy.io.solarnet.</span></span><span class="sig-name descname"><span class="pre">get_extent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeFrame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.io.solarnet.get_extent" title="Permalink to this definition"></a></dt>
+<dd><p>Read the coordinates of the corners to use them with imshow/extent</p>
+<p>Parameters
+filename : str</p>
+<blockquote>
+<div><p>name of the data cube</p>
+</div></blockquote>
+<dl class="simple">
+<dt>timeFrame<span class="classifier">int</span></dt><dd><p>selected frame to get the coordinates for (Default value = 0)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>extent_output</strong> – 1D array with solar coordinates in arcsec of the corners.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>array_like</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.io</span> <span class="k">import</span> <span class="n">solarnet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">extent</span> <span class="o">=</span> <span class="n">solarnet</span><span class="o">.</span><span class="n">get_extent</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">extent</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Carlos Diaz Baso (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.io.solarnet.get_time">
+<span class="sig-prename descclassname"><span class="pre">ISPy.io.solarnet.</span></span><span class="sig-name descname"><span class="pre">get_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fulltime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">utc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.io.solarnet.get_time" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the time information of a ‘SOLARNET’ FITS file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – name of the data cube</p></li>
+<li><p><strong>fulltime</strong> (<em>bool, optional</em>) – information at each wavelength point (Default value = False)</p></li>
+<li><p><strong>utc</strong> (<em>bool, optional</em>) – the output is given in ‘HH:MM:SS’ format (Default value = False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>time_output</strong> – array with time information. If fulltime=False, a 1D array with time at
+middle wavelength tuning; if fulltime=True, a 2D array with
+tuning-dependent time information.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.io</span> <span class="k">import</span> <span class="n">solarnet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data_time</span> <span class="o">=</span> <span class="n">solarnet</span><span class="o">.</span><span class="n">get_time</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">fulltime</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">utc</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Carlos Diaz Baso (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.io.solarnet.get_wav">
+<span class="sig-prename descclassname"><span class="pre">ISPy.io.solarnet.</span></span><span class="sig-name descname"><span class="pre">get_wav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.io.solarnet.get_wav" title="Permalink to this definition"></a></dt>
+<dd><p>Read the wavelength information of a ‘SOLARNET’ FITS file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – name of the data cube</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>wav_output</strong> – 1D wavelength array. It is assumed that spectral sampling does not
+change over time.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>array_like</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.io</span> <span class="k">import</span> <span class="n">solarnet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wav_array</span> <span class="o">=</span> <span class="n">solarnet</span><span class="o">.</span><span class="n">get_wav</span><span class="p">(</span><span class="s1">&#39;filename.fits&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Authors</dt>
+<dd class="field-odd"><p>Carlos Diaz Baso (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.io.solarnet.read">
+<span class="sig-prename descclassname"><span class="pre">ISPy.io.solarnet.</span></span><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.io.solarnet.read" title="Permalink to this definition"></a></dt>
+<dd><p>Read the data of a ‘SOLARNET’ FITS file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – name of the data cube</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>data</strong> – multidimensional data array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.io</span> <span class="k">import</span> <span class="n">solarnet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">solarnet</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;filename.fits&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(30, 4, 41, 1914, 206)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Carlos Diaz Baso (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.io.solarnet.seconds2string">
+<span class="sig-prename descclassname"><span class="pre">ISPy.io.solarnet.</span></span><span class="sig-name descname"><span class="pre">seconds2string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.io.solarnet.seconds2string" title="Permalink to this definition"></a></dt>
+<dd><p>Convert time in seconds to ‘HH:MM:SS’ format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>number</strong> (<em>float</em>) – value in seconds</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>time_string</strong> – time in ‘HH:MM:SS’ format</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.io</span> <span class="k">import</span> <span class="n">solarnet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solarnet</span><span class="o">.</span><span class="n">seconds2string</span><span class="p">(</span><span class="mf">63729.3</span><span class="p">)</span>
+<span class="go">&#39;17:42:09.300000&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Carlos Diaz Baso (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ISPy.io.solarnet.write">
+<span class="sig-prename descclassname"><span class="pre">ISPy.io.solarnet.</span></span><span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.io.solarnet.write" title="Permalink to this definition"></a></dt>
+<dd><p>Write the data as a standard FITS file (without proper SOLARNET header)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – name of the data cube</p></li>
+<li><p><strong>d</strong> (<em>ndarray</em>) – data in memory</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">ISPy.io</span> <span class="k">import</span> <span class="n">solarnet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">solarnet</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;filename.fits&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author</dt>
+<dd class="field-odd"><p>Carlos Diaz Baso (ISP/SU 2019)</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="module-ISPy.io">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ISPy.io" title="Permalink to this headline"></a></h2>
