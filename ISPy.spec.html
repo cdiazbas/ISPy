@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ISPy.spec package &mdash; ISPy 0.1 documentation</title>
+  <title>ISPy.spec package &mdash; ISPy 0.2 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,7 +17,9 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ISPy.util package" href="ISPy.util.html" />
+    <link rel="prev" title="ISPy.sim package" href="ISPy.sim.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,22 +37,14 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">ISPy.spec package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.atlas">ISPy.spec.atlas module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.bfield">ISPy.spec.bfield module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.calib">ISPy.spec.calib module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.chromis">ISPy.spec.chromis module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.crisp">ISPy.spec.crisp module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.crosstalk">ISPy.spec.crosstalk module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec.wfa">ISPy.spec.wfa module</a></li>
-<li><a class="reference internal" href="#module-ISPy.spec">Module contents</a></li>
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ISPy.html">ISPy package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ISPy.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ISPy.html#module-ISPy">Module contents</a></li>
 </ul>
 </li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -65,6 +59,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="ISPy.html">ISPy package</a> &raquo;</li>
       <li>ISPy.spec package</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/ISPy.spec.rst.txt" rel="nofollow"> View page source</a>
@@ -93,12 +88,12 @@
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>cont</strong> (<em>array_like</em>) – full atlas continuum intensities in units <cite>sunit</cite></p></li>
-<li><p><strong>spec</strong> (<em>array_like</em>) – full atlas spectrum in units <cite>sunit</cite></p></li>
-<li><p><strong>wave</strong> (<em>array_like</em>) – wavelengths in units <cite>wunit</cite></p></li>
-<li><p><strong>usys</strong> (<em>str</em>) – unit system, one of <cite>si_inu</cite>, <cite>si_ilambda</cite>, <cite>cgs_inu</cite> or <cite>cgs_ilambda</cite></p></li>
-<li><p><strong>sunit</strong> (<em>astropy CompositeUnit object</em>) – intensity units according to the <cite>usys</cite> setting</p></li>
-<li><p><strong>wunit</strong> (<em>astropy Unit object</em>) – wavelength unit</p></li>
+<li><p><strong>~atlas.cont</strong> (<em>array_like</em>) – full atlas continuum intensities in units <cite>sunit</cite></p></li>
+<li><p><strong>~atlas.spec</strong> (<em>array_like</em>) – full atlas spectrum in units <cite>sunit</cite></p></li>
+<li><p><strong>~atlas.wave</strong> (<em>array_like</em>) – wavelengths in units <cite>wunit</cite></p></li>
+<li><p><strong>~atlas.usys</strong> (<em>str</em>) – unit system, one of <cite>si_inu</cite>, <cite>si_ilambda</cite>, <cite>cgs_inu</cite> or <cite>cgs_ilambda</cite></p></li>
+<li><p><strong>~atlas.sunit</strong> (<em>astropy CompositeUnit object</em>) – intensity units according to the <cite>usys</cite> setting</p></li>
+<li><p><strong>~atlas.wunit</strong> (<em>astropy Unit object</em>) – wavelength unit</p></li>
 </ul>
 </dd>
 </dl>
@@ -113,21 +108,6 @@
 <dd class="field-odd"><p>Jaime de la Cruz Rodriguez (ISP/SU 2019)</p>
 </dd>
 </dl>
-<p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ISPy.spec.atlas.atlas.get" title="ISPy.spec.atlas.atlas.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(w0, w1[, cgs, nograv, perHz])</p></td>
-<td><p>Extract a subset of the atlas profile</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#ISPy.spec.atlas.atlas.to" title="ISPy.spec.atlas.atlas.to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to</span></code></a>(usys_to[, perHz])</p></td>
-<td><p>Convert atlas intensity data to particular units</p></td>
-</tr>
-</tbody>
-</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ISPy.spec.atlas.atlas.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cgs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nograv</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perHz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.atlas.atlas.get" title="Permalink to this definition"></a></dt>
@@ -557,30 +537,6 @@ tr = fpi.dual_fpi_conv(tw) # includes the convergence of the beam at f165.</p>
 <dt class="sig sig-object py" id="ISPy.spec.crisp.crisp">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ISPy.spec.crisp.</span></span><span class="sig-name descname"><span class="pre">crisp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.crisp.crisp" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p class="rubric">Methods</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 68%" />
-<col style="width: 32%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>dual_fpi</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p><strong>dual_fpi_ch</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p><strong>dual_fpi_conv</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p><strong>getwidth</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p><strong>read_reflectivity</strong></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ISPy.spec.crisp.crisp.dual_fpi">
 <span class="sig-name descname"><span class="pre">dual_fpi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wav</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">erh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">erl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ech</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ecl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.crisp.crisp.dual_fpi" title="Permalink to this definition"></a></dt>
@@ -828,16 +784,16 @@ selected wavelength points of the observation</p>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>cw</strong> (<em>float</em>) – central wavelength</p></li>
-<li><p><strong>j1</strong> (<em>float</em>) – total angular momentum quantum number of the lower level</p></li>
-<li><p><strong>j2</strong> (<em>float</em>) – total angular momentum quantum number of the upper level</p></li>
-<li><p><strong>g1</strong> (<em>float</em>) – Landé g-factor of the lower level</p></li>
-<li><p><strong>g2</strong> (<em>float</em>) – Landé g-factor of the upper level</p></li>
-<li><p><strong>geff</strong> (<em>float</em>) – effective Landé g-factor</p></li>
-<li><p><strong>Gg</strong> (<em>float</em>) – \bar{G} in Eqs. (9.74cd), (9.76) and (9.77) in Degl’Innocenti &amp; Landolfi
+<li><p><strong>~line.cw</strong> (<em>float</em>) – central wavelength</p></li>
+<li><p><strong>~line.j1</strong> (<em>float</em>) – total angular momentum quantum number of the lower level</p></li>
+<li><p><strong>~line.j2</strong> (<em>float</em>) – total angular momentum quantum number of the upper level</p></li>
+<li><p><strong>~line.g1</strong> (<em>float</em>) – Landé g-factor of the lower level</p></li>
+<li><p><strong>~line.g2</strong> (<em>float</em>) – Landé g-factor of the upper level</p></li>
+<li><p><strong>~line.geff</strong> (<em>float</em>) – effective Landé g-factor</p></li>
+<li><p><strong>~line.Gg</strong> (<em>float</em>) – \bar{G} in Eqs. (9.74cd), (9.76) and (9.77) in Degl’Innocenti &amp; Landolfi
 (2004); a measure of the sensitivity of a given spectral line to the
 Zeeman effect in Q and U.</p></li>
-<li><p><strong>larm</strong> (<em>float</em><em>, </em><em>constant</em>) – Larmor frequency</p></li>
+<li><p><strong>~line.larm</strong> (<em>float</em><em>, </em><em>constant</em>) – Larmor frequency</p></li>
 </ul>
 </dd>
 </dl>
@@ -851,18 +807,6 @@ Zeeman effect in Q and U.</p></li>
 <dd class="field-odd"><p>Jaime de la Cruz Rodríguez (ISP/SU 2018)</p>
 </dd>
 </dl>
-<p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#ISPy.spec.wfa.line.update" title="ISPy.spec.wfa.line.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>(j1, j2, g1, g2, cw)</p></td>
-<td><p>Update the atomic data for lines that are not defined in the constructor</p></td>
-</tr>
-</tbody>
-</table>
 <dl class="py method">
 <dt class="sig sig-object py" id="ISPy.spec.wfa.line.update">
 <span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ISPy.spec.wfa.line.update" title="Permalink to this definition"></a></dt>
@@ -903,12 +847,15 @@ Zeeman effect in Q and U.</p></li>
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ISPy.sim.html" class="btn btn-neutral float-left" title="ISPy.sim package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ISPy.util.html" class="btn btn-neutral float-right" title="ISPy.util package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, ISP.</p>
+    <p>&#169; Copyright 2021, ISP.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
